@@ -1,20 +1,15 @@
 import React from 'react';
 
-interface DropdownIconProps {
+interface Props {
 	className?: string;
 	size: [width: number, height: number];
 	minSize?: [minWidth: number, minHeight: number];
 	fill?: string;
 }
 
-export function DropdownIcon({
-	className,
-	size,
-	minSize,
-	fill,
-}: DropdownIconProps) {
+export function DropdownIcon({ className, size, minSize, fill }: Props) {
 	return (
-		<div>
+		<>
 			<svg
 				className={className || 'fill-current'}
 				width={size[0]}
@@ -32,6 +27,6 @@ export function DropdownIcon({
 					fill=''
 				/>
 			</svg>
-		</div>
+		</>
 	);
 }
